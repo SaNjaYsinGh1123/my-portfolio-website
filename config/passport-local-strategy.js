@@ -31,13 +31,13 @@ passport.use(new LocalStrategy({
 
 
 passport.serializeUser(function(user,done){
-           console.log('user.id is set in cookie');
+          // console.log('user.id is set in cookie');
           done(null,user.id);
  });
 
  //this check whether cookie is present or not
 passport.deserializeUser(function(id, done){
-     console.log('user.id in cookie is present is checked by passport');
+     //console.log('user.id in cookie is present is checked by passport');
      User.findById(id, function(err , user){
          if(err){
              console.log('error in finding user (passport deserialize)');

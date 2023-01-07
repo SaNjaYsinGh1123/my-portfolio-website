@@ -6,7 +6,6 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 
 
-const port = 8000;
 const app = express();
 
 
@@ -94,9 +93,9 @@ app.use('/',require('./routes'));
 
 
 // 1 listening port
-app.listen(port, function(err){
+app.listen(process.env.PORT ||8000, function(err){
     if(err){
         console.log('error:',err);
     }
-    console.log('server is running on :',port);
+   // console.log('server is running on :',8000);
 })
