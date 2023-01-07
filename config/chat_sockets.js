@@ -1,8 +1,9 @@
 module.exports.chatSockets = function(chatServer){
    // console.log('hi');
+    let port = process.env.PORT || 8000;
     let io = require('socket.io')(chatServer,{
         cors:{
-            origin:"http://127.0.0.1:"+ (process.env.PORT || "8000"),
+            origin:"http://127.0.0.1:"+ port,
             methods:["GET","POST"]
         }
 
