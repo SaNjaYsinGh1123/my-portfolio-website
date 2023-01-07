@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>
+            chatting app
+        </title>
+        <link rel="stylesheet" type="text/css" href="css/chat_box.css">
+        <style>
+             #chat-messages-list
+                {   background-color: #0abdf9ee;
+                    background-image: url(/images/gifs/giphy2.gif);
+                    /* background-color: rgb(255, 144, 17); */
+                    color:white;
+                    padding-bottom: 0px;
+                }
+        </style>
+    </head>
+
+    <body>
+            <div id="user-chat-box">
+                <nav>
+                    <ul>
+                        <li class="brand">ChatAPP</li>
+                       
+                    </ul>
+                </nav> 
+                <ul id="chat-messages-list">
+                    
+        
+                </ul>
+                <div id="chat-message-input-container">
+                    <input id="chat-message-input" type="text" placeholder="Type message here">
+                    <button id="send-message">Send</button>
+                </div>
+        
+            </div>
+        
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js" integrity="sha512-YeeA/Qxn5hYdkukScTCNNOhTrv1C2RubAGButJ1rmgQwZf/HdRaCGl+JAVkqsqaNRaYNHdheiuKKuPf9mDcqKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+
+        <script src="/javascript/chat_engine.js">
+        </script>       
+        <script>
+           new ChatEngine('<%=locals.user.name %>')
+       </script>
+    
+    </body>
+    </html>

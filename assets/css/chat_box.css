@@ -1,0 +1,122 @@
+body{
+    background-color: rgba(137, 43, 226, 0.148);
+}
+#user-chat-box {
+    height: 90vh;
+    background-color:orangered;
+    color: white;
+    width: 70%;
+    margin:5px auto; 
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+ }
+ 
+nav ul{
+        display: flex;
+        list-style: none;
+        height: 7vh; 
+        background-color: black;
+        color: white;
+        position: sticky;
+        top:0;
+        margin-top: 2px;
+        align-items: center;
+}
+    
+ nav ul li{
+        margin:0 1px;
+} 
+    
+    
+.brand{
+       display: flex; 
+       align-items: center; 
+        font-weight: bolder; 
+        /* font-size: 1.3rem;  */
+}
+
+#user-chat-box #chat-messages-list {
+      list-style: none;
+      width:102%;
+      height: 73vh;
+      color: rgb(0, 0, 0);
+      font-family: 'Courier New', Courier, monospace;
+      padding: 5px;
+      margin-top: -12px;
+      overflow-y: scroll;
+      position: relative;
+
+}
+
+
+
+#user-chat-box #chat-messages-list li{
+        display: flex;
+        flex-direction: column;
+        min-width: 50px;
+        max-width: 40%;
+        min-height: 30px;
+        line-break: anywhere;
+        background-color: white;
+        border: 1px solid black;
+        padding: 2px;
+}
+
+
+#user-chat-box #chat-messages-list .other-message {
+        float: left;
+        clear: both;
+        margin: 5px;
+        padding: 2px;
+        border-radius: 5px 0px 5px 5px;
+
+}
+
+#user-chat-box #chat-messages-list .self-message {
+        float: right;
+        clear: both;
+        margin: 5px;
+        padding: 2px;
+        border-radius: 0px 5px 5px 5px;
+
+}
+
+    
+#user-chat-box #chat-message-input-container {
+      width: 99%;
+      display: flex;
+      flex-direction: row;
+      margin: 0px auto;
+      margin-top: -14px;
+
+ }
+      
+#user-chat-box #chat-message-input-container #chat-message-input {
+        height: 50px;
+        width: 70%;
+        border: 1px solid rgb(186, 180, 180);
+        padding-left: 5px;
+        border-radius: 0px 0px 0px 5px;
+}
+      
+#user-chat-box #chat-message-input-container #send-message {
+        height: 50px;
+        width: 30%;
+        font-size: 25px;
+        font-weight: 700;
+        color: black;
+        border: none;
+        background: #02334356;
+        border: 1px solid rgb(186, 180, 180);
+
+        border-radius: 0px 0px 5px 0px;
+}
+
+.username{
+        background-color: rgba(232, 247, 249, 0.744);
+        margin-bottom: 2px;
+        font: size 10px;
+}

@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <title>Sign in</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/basic.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>      
+    <div class="sign-form">
+      <div class="brand margin"><img src="/images/gifs/o.png">SIGN-IN</div>
+      <table>
+        <form  action="/user/create-session" method="post">
+          <tr>
+            <td>
+              <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            </td>
+            
+          </tr>
+
+          <tr>
+            <td>
+              <label for="name">Password:</label>
+              <input type="password" name="password" id="password" required>      
+            </td>
+            
+          </tr>
+
+       
+
+          <tr>
+            <td>
+              <input type="submit" value="SIGN IN" class="submit"> 
+            </td>
+          </tr>
+        </form>
+         
+        <td id="or">
+          <img src="/images/gifs/or.png">
+        </td>
+       </tr>
+
+        <tr>
+          <td>
+            <a href="/google-sign">
+              <div id="google-signup">
+                  <img src="/images/gifs/google.png">
+              </div>
+            </a>
+            <div id="signin">
+              Create account &nbsp;<a href="/user/sign-in">SIGN UP</a>
+            </div>
+          </td>
+        </tr>
+
+      </table>
+  </div>
+
+
+
+
+      <script src="/javascript/flash.js"></script>
+      <% if(flash.success && flash.success.length >0) { %> 
+      <script >
+             flashSuccess('<%= flash.success%>');
+      </script>
+      <% } %>
+
+      <% if(flash.error && flash.error.length > 0){ %> 
+      <script>
+            flashError('<%= flash.error %>')
+              </script>
+      <% } %>
+    </body>
+</html>
+
+<!-- 1 install express
+2 install ejs
+3 insall mongodb
+4 install mongoose
+5 app.use(express.urlencoded());  use to decode sign-up form data
+6 install cookie parser for reading and writing cookie value 
+7  tell the server to use cookie-parser
+8 install passport and passport local
+9 making passport-local-strategy in config  ,
+  serializer is used to tell which key (in our case user.id) is going to put in session
+  deserializer is used to check user.id in cookie is valid or not 
+10  express-session is used by passport to encode user.id and put it in cookie 
+
+11  creating checkAuthentication in passport local but till now req.user is not provided for views page
+   so creating setAthentication and use it in index.js as middleware 
+12 install connect-mongo
+   every time when we change code server is start again and user is signout automatically to solve
+   this issue we use connect-mongo
+13 creating signOut using req.logout();
+14 social authentication
+15 installing connect-flash for flash masseges,use it in index,make c middleware in config, use it in index
+
+ -->
+

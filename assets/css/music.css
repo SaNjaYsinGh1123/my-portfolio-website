@@ -1,0 +1,270 @@
+.brand img{
+    width: 20px;
+    height: 20px;
+}
+
+body{
+    background-color: antiquewhite;
+}
+*{
+    padding:0;
+    margin: 0;
+}
+
+.music-player-body{
+    min-height: 80vh;
+    background-color:#009CD3;
+
+    color: white;
+    display: flex;
+    width: 70%;
+    margin:5px auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    height: 60px;
+    position: sticky;
+    background-color: black;
+    color: white;
+    align-items: center;
+    top:0;
+}
+
+nav ul li{
+    margin:0 10px;
+}
+
+
+.brand{
+   display: flex; 
+   align-items: center; 
+   font-weight: bolder; 
+   font-size: 1.3rem; 
+}
+
+.container{
+    height: 75vh;
+    width: 105%;
+    background-color:black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    margin: 1px;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+ 
+.songlist{
+    background-color:black;
+} 
+
+.songBanner{
+    position: absolute;
+    margin-top: 50px;
+    left:60%;
+    
+}
+.songBanner img{
+    height: 200px;
+    width: 200px;
+}
+
+ .songBannergif{
+    position: absolute;
+    margin-top: 40vh;
+    left:61%;
+}
+.songBannergif img{
+    height: 200px;
+    width: 200px;
+} 
+
+.border{
+    border: 1px solid white;   
+}
+.bottom{
+    height: 80px;
+    width:70vw;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+.icons{ 
+    width: 40%;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    justify-content: space-evenly;
+} 
+
+.song-gif{
+    position: absolute;
+    left:5vw;
+    top:45%;
+}
+
+.song-info-name{
+    position: absolute;
+    max-width: 100px;
+    left:12vw;
+    top:50%;
+}
+
+.song-info-duration{
+    position: absolute;
+    right:10vw;
+    top:50%;
+}
+
+
+
+.songItem{
+    height:40px;
+    width: 100%;
+    display:flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    background-color:white;
+
+    color:black;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 12px;
+    border-radius: 34px;
+
+}
+
+.songItem img{
+    height:38px;
+    width:38px;
+    margin: 0 23px;
+    border-radius: 50px;
+}
+
+.songlistplay{
+    margin:0 30px;
+}
+
+.display{
+    display:none;
+}
+.opacity{
+    opacity: 0;
+}
+
+.slider::-webkit-slider-thumb{
+
+    -webkit-appearance: none;
+    appearance: none;
+    height: 14px;
+    width: 14px;
+    background:white;
+    cursor: pointer;
+} 
+
+#myProgressBar{
+    width:90%;
+}
+.slider{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    width: 100%;
+    background:#009CD3;
+}
+.songItem i:hover{
+    color:red;
+}
+
+.icons i:hover{
+    color:#009CD3;
+}
+
+
+/*-------------Animation Effects------------------*/
+@keyframes fade {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+   
+}
+
+.fadeAnimation
+{
+    animation: fade 2s ease-in-out 1s infinite alternate;
+}
+
+
+/* @keyframes moveleft {
+    from{
+        left:80%;
+        opacity:0;
+       
+    }
+    to{
+        left:0%;
+        opacity: 1;
+        
+    }
+    
+}
+.move-left
+{
+    position: absolute;
+    left:80%;
+    animation: moveleft 2s ease-in-out 1s;
+} */
+
+/*...........media queries.............*/
+@media screen and (max-width:1000px){
+    .songBanner{
+        display: none;
+    }
+    .songBannergif{
+        display: none;
+    }
+}
+@media screen and (max-width:768px){
+   
+   .songlist h1{
+    font-size: 1.4rem;
+   }
+   .songItem{
+    margin:10px auto;
+    width: 90%;
+    font-size: 0.9rem;
+   }
+   .song-duration{
+       display: none;
+   }
+   .song-info-name{
+    left:10vw;
+    max-height:19px;
+    word-break: break-all;
+    overflow: hidden;
+   }
+     
+}
+.SongName{
+    max-height:19px;
+    word-break: break-all;
+    overflow: hidden;
+
+ }
+   
+

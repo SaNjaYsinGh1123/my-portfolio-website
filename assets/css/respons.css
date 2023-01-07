@@ -1,0 +1,136 @@
+
+
+@media screen and (max-width:600px)
+{
+    .mid-line
+    {
+        left:2%;
+        height: 90%;
+        top:3%;
+        color: rgb(32, 137, 11);
+    }
+    .education-box
+    {
+        width:90%;
+        left:10% !important;
+        padding: 0;
+        height: 100px;
+    }
+    /*
+    .ex-box:nth-child(2n)
+    {
+        left:10%;
+    }*/
+    .education-box:nth-child(2n) div
+    {
+        text-align: right;
+    }
+    .education-box::after
+    {
+       left:-11.5% !important;
+    }
+    html
+    {
+        font-size: 15px !important;
+    }
+    .section-heading span
+     {
+        font-size: 30px;
+     }
+     .horizontal-list li
+    {
+      display:inline-block;
+      margin: 30px 30px 30px 0px;
+    }
+     
+    #my-pic
+    {
+        height: 10rem;
+        width: 10rem;
+        margin-top: -5rem;
+        margin-bottom: 0px;
+    }
+    
+    #my-name
+    {
+        font-size: 1.8rem;
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+    }
+    .nav li {
+        margin: 0px 4px 4px 0px;
+    }
+    .nav li a{
+        color: white !important;    
+    }
+    #burger{
+        display: block;
+    }
+    #burger div{
+        margin-left: 20px;
+    }
+    .opacity{
+        opacity: 1;
+    }
+    .navbarheight{
+        height: 40vh !important;
+        background-color: rgb(24, 22, 22) !important;
+        border-bottom: 1px solid white !important;
+
+   }
+
+}
+
+
+
+@media screen and (max-width:600px)
+{
+    .skill-diagrams
+    {
+        flex-direction: column;
+        flex-wrap: nowrap !important;
+        height: 55vmax;
+        margin-top:-70px;
+    }
+    .skill-progress
+    {
+        height: 8vmin;
+        width:50vw;
+        margin: 2px;
+    }
+    .port-box
+    {
+        height: 150px;
+    }
+    .contact-form
+    {
+        width:80% !important;
+        margin-left: 10%;
+        padding-bottom: 20px;
+        border-bottom: 1px solid red;
+    }
+    .address
+    {
+        width: 70% !important;
+        margin-left: 10%;
+        margin-top: 20px;
+    }
+    .address h3
+    { 
+       font-size: 1.5rem !important;
+       font-weight: 500 !important;
+       margin-bottom: 10px;
+    }
+    .my-details-info-container i 
+    {
+      color:white;
+      font-size: 1.5rem;
+    }
+}

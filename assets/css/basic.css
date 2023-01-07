@@ -1,0 +1,82 @@
+body{
+     background-color: rgb(80, 111, 204);
+}
+.sign-form{
+     position: relative;
+     height: 80vh;
+     width: 80vw;
+     top:5vh;
+     margin:auto; 
+     background-color: white; 
+     border-radius: 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+.padding{
+     padding-top: 20px;
+}
+
+.sign-form input{
+     height: 40px;
+     width: 60vw;
+     border:1px solid rgba(128, 128, 128, 0.664);
+     border-radius: 10px;
+     margin:10px auto;
+}
+
+.submit{
+     background-color: rgb(245, 35, 70);
+     margin-top: 10px;
+     
+}
+
+
+td label{
+     display:block;
+     margin-bottom: -8px;
+     font-weight: 700;
+}
+
+#google-signup{
+     background-color: whitesmoke;
+     text-align: center;
+     margin: 8px;
+     height: 40px;
+     border-radius: 10px;
+     padding-top: 10px;
+}
+
+#google-signup img{
+     height: 30px;
+}
+#google-signup:hover{
+     background-color: rgb(245, 35, 70);
+}
+
+#signin{
+     background-color: whitesmoke;
+     text-align: center;
+     margin: 8px;
+}
+
+.brand{
+     font-size: 20px;
+}
+
+.margin{
+     margin-bottom: 15px;
+}
+.brand img{
+     height: 20px;
+     margin-bottom: -3px;
+}
+
+#or img{
+     margin: 0 auto;
+     height: 30px;
+}
+#or{
+     text-align: center;
+}

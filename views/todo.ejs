@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/todo.css'>
+</head>
+<body>
+  <div id="todo">
+    <div id="main">
+        <div id="first">
+           <div id="brand-name">
+               TODO APP
+           </div>
+            
+        </div>
+    <form action="/todo-app/add-task" method="post">
+        <div id="second">
+           <div class="margin-top">
+               DISCRIPTION
+           </div>
+           <textarea name="discription" required placeholder="What do you need to do?"></textarea>
+        </div>
+        <div id="third">
+            <span>
+               <div class="margin-bottom">
+                   CATEGORY
+                </div> 
+                <select name="category" >
+                    <option selected> Personal</option>
+                    <option> Work</option>
+                    <option> School</option>
+                    <option> Cleaning</option>
+                    <option> other</option>
+                 
+                </select>
+            </span>
+
+            <span class="border-left">
+                <div class="margin-bottom">
+                    DUE DATE
+                </div>
+                <input type="date" name="date" required>
+            </span>
+        </div>
+        <div id="forth">
+            <span>
+                <input type="submit" id="add-task" value="+     ADD TASK" class="button">
+            </span>
+     </form>
+
+     <form action="/todo-app/delete-task" method="post">
+            <span>      
+              <input type="submit" id="delete-task" value="-    DELETE TASK" class="button">
+            </span>
+         </div>
+    </div>
+            <div id="task-container">
+            <%  for( task of tasks){%>
+            <table class="task">
+                <tr>
+                    <td class="check-box">
+                        <input type="checkbox" name="deltask" value="<%= task._id %>">
+                    </td>
+                    <td class="discription-box">
+                    <div>
+                            <%= task.discription %>
+                    </div>
+                    <div class="task-date">
+                        <%= task.date %>
+                    </div> 
+                    </td>
+                    <td class="category-box" >
+                    <span>
+                            <%= task.category %>
+                    </span>
+                    </td>
+                </tr>
+            </table>
+            <%}%>
+
+            </div>
+    </form>
+      
+  </div>
+
+  
+   <script src="/javascript/todo.js">
+         
+   </script>
+</body>
+</html>

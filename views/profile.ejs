@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            #navbar{
+                list-style: none;
+                display: flex;
+                height: 55px;
+                width: 100%;
+                background-color: rgba(35, 34, 33, 0.471);
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            #sign a{
+                text-decoration: none;
+                font-size: 20px;
+                color: white;
+                margin-right: 20px;
+            }
+            #brand{
+                font-size: 25px;
+                font-weight: 500;
+                margin-left: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #brand img{
+                height: 20px;
+                width: 20px;
+                margin-right: 4px;
+            }
+             
+            #port-box{
+                height: 80vh;
+                width: 80vw;
+                margin: 20px auto;
+                background-color: rgba(128, 128, 128, 0.378);
+                display: flex;
+                flex-wrap: wrap;
+
+            }
+            #port-box img{
+                height: 200px;
+                width: 200px;
+                }
+            
+
+
+            @media screen and (max-width: 600px){
+                #navbar{
+                    justify-content: space-between;
+                }
+                
+
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+
+    <body>
+        <ul id="navbar">
+            <% if(locals.user){ %>
+            <li id="brand">
+                <img src="/images/gifs/o.png">
+                <%= user.name %>
+            </li>
+            <li id="sign">
+                <a href="/user/sign-out">sign-out</a>
+            </li>
+            <% } %>
+        </ul>
+        
+        <div id="port-box">
+                <div>
+                    <a href="/">
+                        <img src="/images/gifs/portfolio.png">
+                    </a>
+                </div>
+                
+                <div>
+                    <a href="/calculator">
+                        <img src="/images/gifs/calculator.png">
+                    </a>
+                </div>
+
+                <div >
+                    <a href="/ping-pong-game">
+                        <img src="/images/gifs/game.png">
+                    </a>
+                </div>
+
+                <div >
+                    <a href="/music-player">
+                        <img src="/images/gifs/music.png">
+                    </a>
+                </div>
+
+                <div>
+                    <a href="/todo-app">
+                        <img src="/images/gifs/todo.png">
+                    </a>
+                </div>
+
+                <div>
+                    <a href="/chat-engine">
+                        <img src="/images/gifs/chatapp.png">
+                    </a>
+                </div>
+        </div>
+
+
+
+
+        <script src="/javascript/flash.js"></script>
+        <% if(flash.success && flash.success.length >0) { %> 
+        <script >
+               flashSuccess('<%= flash.success%>');
+        </script>
+        <% } %>
+
+        <% if(flash.error && flash.error.length > 0){ %> 
+        <script>
+              flashError('<%= flash.error %>')
+                </script>
+        <% } %>
+    </body>
+</html>

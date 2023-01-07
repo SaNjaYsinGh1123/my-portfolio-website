@@ -1,0 +1,57 @@
+body{
+    background-color: rgba(0, 0, 255, 0.63);
+}
+
+button{
+    width: 80px;
+    height: 30px;
+    background-color: white;
+    border: 0px;
+    font-size: large;
+}
+button:hover{
+    box-shadow: 0px 0px 8px 2px rgb(202, 197, 197);
+}
+button:focus
+{
+        box-shadow: 0px 0px 3px 0px rgba(71, 183, 244, 0.786);
+        background-color: rgb(251, 188, 5,1);
+        color:white;
+}
+.red{
+    background-color: rgb(155, 12, 12);
+    color: white;
+}
+.zero{
+    width: 162px;
+}
+.cal{
+    position: relative;
+    top:200px;
+    margin: 0px auto;
+    background-color: rgb(238, 233, 233);
+    height: fit-content;
+    width: fit-content;
+    padding: 6px;
+}
+.screen{
+   height: 40px;
+   background-color: azure;
+   margin-top: 5px;
+   margin-bottom: 4px;
+   padding-left: 10px;
+   padding-bottom: 0px;
+   font-size: 30px;
+   color: rgb(49, 49, 236);
+   font-style: oblique;
+}
+.title
+{
+    height: 30px;
+    background-color: black;
+    margin-top: 4px;
+    color: white;
+    font-size: large;
+    text-align: center;
+    padding-top: 4px;
+}

@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>Sign up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/basic.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+  </head>
+  <body>
+    <div class="sign-form padding">
+          <div class="brand"><img src="/images/gifs/o.png">SIGN-UP</div>
+          <table>
+            <form  action="/user/create" method="post">
+              <tr>
+                <td>
+                  <label for="name">Name:</label>
+                  <input type="text" name="name" id="name" required>
+                </td>
+                
+              </tr>
+              <tr>
+                <td>
+                  <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                </td>
+                
+              </tr>
+
+              <tr>
+                <td>
+                  <label for="password">Password:</label>
+                  <input type="password" name="password" id="password" required>      
+                </td>
+                
+              </tr>
+
+              <tr>
+                <td>
+                  <label for="Confirm-password">Confirm-password:</label>
+                  <input type="password" name="confirm_password" id="Confirm-password" required>
+                </td>
+                
+              </tr>
+
+              <tr>
+                <td>
+                 <a href="/user/create">
+                   <input type="submit" value="SIGN UP" class="submit"> 
+                 </a> 
+                </td>
+              </tr>
+            </form>
+             
+           <tr>
+            <td id="or">
+              <img src="/images/gifs/or.png">
+            </td>
+           </tr>
+
+
+            <tr>
+              <td >
+                <a href="/google-sign">
+                  <div id="google-signup">
+                      <img src="/images/gifs/google.png">
+                  </div>
+                </a>
+                <div id="signin">
+                  Already have an account ? <a href="/user/sign-in">SIGN IN</a>
+                </div>
+              </td>
+            </tr>
+
+          </table>
+      </div>
+
+
+      <script src="/javascript/flash.js"></script>
+      <% if(flash.success && flash.success.length >0) { %> 
+      <script >
+             flashSuccess('<%= flash.success%>');
+      </script>
+      <% } %>
+
+      <% if(flash.error && flash.error.length > 0){ %> 
+      <script>
+            flashError('<%= flash.error %>')
+      </script>
+      <% } %>
+    </body>
+</html>
