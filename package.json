@@ -7,7 +7,7 @@
     "start": "nodemon index.js",
     "build": "echo sucess",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  },"bin":{"execute":"index.js"},
   "author": "Sanjay Singh",
   "license": "ISC",
   "dependencies": {
