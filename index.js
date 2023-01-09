@@ -68,7 +68,7 @@ app.use(session(
         mongoUrl:'mongodb://127.0.0.1:27017/project_users_db',
         autoRemove: "disabled"
      },
-    function(err){
+    function(err){ 
         console.log(err || 'connect-mongodb setup ok');
     })
   }));
@@ -98,4 +98,4 @@ app.listen(process.env.PORT ||8000, function(err){
         console.log('error:',err);
     }
    // console.log('server is running on :',8000);
-})
+});
