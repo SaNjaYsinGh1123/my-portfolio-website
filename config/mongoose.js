@@ -4,7 +4,7 @@ mongoose.set('strictQuery',true);
 
 
 
-mongoose.connect(process.env.uri);
+mongoose.connect('mongodb+srv://megacloud:megacloud@cluster0.gijawgh.mongodb.net/?retryWrites=true&w=majority');
 
 const db = mongoose.connection;
 
