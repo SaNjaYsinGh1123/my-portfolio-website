@@ -42,7 +42,7 @@ const flashMware = require('./config/middleware');
 // 13
 const chatServer = require('http').Server(app);
 const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
-chatServer.listen(5000,function(err){
+chatServer.listen(process.env.PORT || 5000,function(err){
     if(err){
         console.log('error:',err);
     }
@@ -65,8 +65,8 @@ app.use(session(
       maxAge: (1000 * 60 * 100)
      },
      store:MongoStore.create({
-        mongoUrl:process.env.uri,
-        // mongoUrl:'mongodb://127.0.0.1:27017/project_users_db',
+        // mongoUrl:process.env.uri,
+        mongoUrl:'mongodb://127.0.0.1:27017/project_users_db',
         autoRemove: "disabled"
      },
     function(err){ 
@@ -98,5 +98,5 @@ app.listen(process.env.PORT ||8000, function(err){
     if(err){
         console.log('error:',err);
     }
-   // console.log('server is running on :',8000);
+   console.log('server is running on :',8000);
 });
