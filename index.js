@@ -1,6 +1,6 @@
 // 1 install express and set server
 const express = require('express');
-
+const path = require('path');
 
 // 6 install cookie parser for reading and writing cookie value 
 const cookieParser = require('cookie-parser');
@@ -87,7 +87,7 @@ app.use(flashMware.setflash);
 
 // 3 insall ejs and set 'view engine' to 'ejs'
 app.set('view engine','ejs');
-app.set('views','./views');
+app.set('views',path.join(__dirname,'./views'));
 
 // 2 use express router
 app.use('/',require('./routes'));
