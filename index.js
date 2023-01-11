@@ -50,9 +50,10 @@ chatServer.listen(process.env.PORT || 5000,function(err){
     console.log('chat server is running on :',5000);
 });
 
+app.use(express.static(path.join(__dirname,'./assets/')));
+app.use("/sounds",express.static(path.join(__dirname,'./assets/sounds')));
 
 // 14
-app.use(express.static(path.join(__dirname,'./assets/')));
 
 
 //8 define session 
