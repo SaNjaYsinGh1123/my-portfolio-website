@@ -7,7 +7,7 @@ const google = require('../config/googleData');
 passport.use(new GoogleStrategy({
     clientID:google.clientId,
     clientSecret: google.clientSecret,
-    callbackURL:"https://my-portfolio-website-a2yl.onrender.com/google/callback"
+    callbackURL:"https://my-portfolio-website-sanjay.vercel.app/google/callback"
 
 },function(accessToken,refreshToken,profile,done){
     User.findOne({email:profile.emails[0].value}).exec(function(err, user){

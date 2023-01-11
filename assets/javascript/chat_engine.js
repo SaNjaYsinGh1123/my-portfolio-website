@@ -2,7 +2,6 @@
 
 const  el = document.getElementById('chat-messages-list');
 
-const audio = new Audio('/sounds/notification/chat.mp3');
 
 function  autoScroll(){
     if(el){
@@ -22,7 +21,7 @@ class ChatEngine{
         this.chatBoxId = chatBoxId;
         this.userName = userName;
 
-        this.socket = io.connect('https://my-portfolio-website-sanjay.vercel.app/');
+        this.socket = io.connect('https://my-portfolio-website-sanjay.vercel.app');
         if(this.userName){
         this.connectionHandler();
         }

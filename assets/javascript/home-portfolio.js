@@ -14,11 +14,13 @@ navMenuAnchorTag.addEventListener('click',function(event){
 }
 function scrollEffect(targetsection){
     var targetsectioncoordinates=targetsection.getBoundingClientRect();
+    console.log(targetsectioncoordinates);
+    console.log(window.innerHeight);
     if(targetsectioncoordinates.top<=0) {
         clearInterval(interval);
         return;
     }
-     else if(targetsectioncoordinates.bottom < window.innerHeight)
+     else if(targetsectioncoordinates.bottom <= window.innerHeight)
      {
          clearInterval(interval);
          return;
@@ -77,6 +79,7 @@ window.addEventListener('scroll',function(){
 });
 
 const burger = document.getElementById('burger');
+const burger_div = document.querySelectorAll('#burger div');
 
 const nav = document.getElementsByClassName('nav')[0];
 
@@ -86,6 +89,9 @@ burger.addEventListener('click',function(){
   
     nav.classList.toggle('opacity');
     navbar.classList.toggle('navbarheight');
+    burger_div[0].classList.toggle('burger-color');
+    burger_div[1].classList.toggle('burger-color');
+    burger_div[2].classList.toggle('burger-color');
 
 });
 

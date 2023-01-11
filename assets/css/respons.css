@@ -79,6 +79,9 @@
     .opacity{
         opacity: 1;
     }
+    .burger-color{
+        background-color: white !important;
+    }
     .navbarheight{
         height: 40vh !important;
         background-color: rgb(24, 22, 22) !important;
@@ -108,6 +111,10 @@
     .port-box
     {
         height: 150px;
+    }
+
+    .port-details p{
+        opacity: 0;
     }
     .contact-form
     {

@@ -476,6 +476,7 @@ section:nth-child(2n+1)
 
 .port-box:hover .anchor{
     border:1px soild black;
+    background-color: rgb(24, 22, 22);
     color: rgba(221, 11, 11, 0.944);
 }
 
@@ -581,10 +582,10 @@ button:focus {
     margin: 10px auto;
     text-align: center;
     font-weight: 900;
-    color: rgba(222, 167, 155, 0.807);
+    color: rgba(20, 207, 235, 0.807);
     overflow:hidden;
     -webkit-animation: type 2s steps(50, end);
-    animation: type 5s steps(50, end) infinite 1s;
+    animation: type 4s steps(50, end) infinite 1s;
 }
 
 @keyframes type {

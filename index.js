@@ -47,7 +47,7 @@ chatServer.listen(process.env.PORT || 5000,function(err){
     if(err){
         console.log('error:',err);
     }
-    console.log('chat server is running on :',5000);
+    console.log('chat server is running on :',process.env.PORT);
 });
 
 app.use(express.static(path.join(__dirname,'./assets/')));
