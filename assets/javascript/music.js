@@ -13,16 +13,16 @@ let songGif = document.getElementById('song-gif');
 let songItems = document.getElementsByClassName('songItem');
 
 let songs = [
-    {songName:"let me down slowly",songDuration:"0.5:34",filepath:"/sounds/song/1.mp3", coverPath: "/images/covers/1.jpg"},
-    {songName:"Excuses",songDuration:"0.2:56",filepath:"/sounds/song/2.mp3", coverPath: "/images/covers/2.jpg"},
-    {songName:"Love Nwantiti",songDuration:"0.2:42",filepath:"/sounds/song/3.mp3", coverPath: "/images/covers/3.jpg"},
-    {songName:"let me down slowly",songDuration:"0.5:34",filepath:"/sounds/song/1.mp3", coverPath: "/images/covers/4.jpg"},
-    {songName:"Excuses",songDuration:"0.2:56",filepath:"/sounds/song/2.mp3", coverPath: "/images/covers/5.jpg"},
-    {songName:"Love Nwantiti ",songDuration:"0.2:42",filepath:"/sounds/song/3.mp3", coverPath: "/images/covers/6.jpg"},
-    {songName:"let me down slowly ",songDuration:"0.5:34",filepath:"/sounds/song/1.mp3", coverPath: "/images/covers/1.jpg"},
-    {songName:"Love Nwantiti",songDuration:"0.2:42",filepath:"/sounds/song/3.mp3", coverPath: "/images/covers/2.jpg"},
-    {songName:"let me down slowly",songDuration:"0.5:34",filepath:"/sounds/song/1.mp3", coverPath: "/images/covers/1.jpg"},
-    {songName:"Excuses",songDuration:"0.2:56",filepath:"/sounds/song/2.mp3", coverPath: "/images/covers/2.jpg"},
+    {songName:"let me down slowly",songDuration:"0.5:34",filepath:"/sounds/song/0.mp3", coverPath: "/images/covers/1.jpg"},
+    {songName:"Excuses",songDuration:"0.2:56",filepath:"/sounds/song/1.mp3", coverPath: "/images/covers/2.jpg"},
+    {songName:"Love Nwantiti",songDuration:"0.2:42",filepath:"/sounds/song/2.mp3", coverPath: "/images/covers/3.jpg"},
+    {songName:"let me down slowly",songDuration:"0.5:34",filepath:"/sounds/song/0.mp3", coverPath: "/images/covers/4.jpg"},
+    {songName:"Excuses",songDuration:"0.2:56",filepath:"/sounds/song/1.mp3", coverPath: "/images/covers/5.jpg"},
+    {songName:"Love Nwantiti ",songDuration:"0.2:42",filepath:"/sounds/song/2.mp3", coverPath: "/images/covers/6.jpg"},
+    {songName:"let me down slowly ",songDuration:"0.5:34",filepath:"/sounds/song/0.mp3", coverPath: "/images/covers/1.jpg"},
+    {songName:"Love Nwantiti",songDuration:"0.2:42",filepath:"/sounds/song/2.mp3", coverPath: "/images/covers/2.jpg"},
+    {songName:"let me down slowly",songDuration:"0.5:34",filepath:"/sounds/song/0.mp3", coverPath: "/images/covers/1.jpg"},
+    {songName:"Excuses",songDuration:"0.2:56",filepath:"/sounds/song/1.mp3", coverPath: "/images/covers/2.jpg"},
 ]
  
 console.log(songItems.length);
