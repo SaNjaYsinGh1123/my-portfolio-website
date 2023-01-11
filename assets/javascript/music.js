@@ -66,7 +66,9 @@ const setAudioPath = function(){
     songBannergif.classList.add('border');
     songGif.classList.remove('opacity');
     // audioElement.src = '/sounds/song/' + (songIndex)+'.mp3';
-    audioElement.src = songs[songIndex].filepath;
+    // audioElement.src = songs[songIndex].filepath;
+     audioElement =new Audio('/sounds/song/' + (songIndex) + '.mp3');
+
 
 }
 
