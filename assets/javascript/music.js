@@ -36,18 +36,6 @@ for(let i=0;i<songItems.length;i++){
 
 
 
-//--------------- updating range---------------
-audioElement.addEventListener('timeupdate',()=>{
-    progress = parseInt((audioElement.currentTime / audioElement.duration)*100); 
-    progressBar.value = progress;
-   // console.log(progress);
-});
-
-//----------------if someone change the range element---------
-progressBar.addEventListener('change',()=>{
-    audioElement.currentTime = ((progressBar.value * audioElement.duration) /100);
-});
-
 const setDefault = ()=>{
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         element.classList.remove('fa-pause-circle');
@@ -145,6 +133,18 @@ nextPlay.addEventListener('click',function(){
         })
     });
 
+
+    //--------------- updating range---------------
+audioElement.addEventListener('timeupdate',()=>{
+    progress = parseInt((audioElement.currentTime / audioElement.duration)*100); 
+    progressBar.value = progress;
+   // console.log(progress);
+});
+
+//----------------if someone change the range element---------
+progressBar.addEventListener('change',()=>{
+    audioElement.currentTime = ((progressBar.value * audioElement.duration) /100);
+});
 
     //console.log(songItemplayIconElement);
           //console.log(songItemplayIconElement.getElementsByClassName('songItemPlay')[0].innerText);
