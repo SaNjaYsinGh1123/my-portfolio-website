@@ -1,7 +1,7 @@
 module.exports.home = function(req,res){
     // res.cookie('user_id',25);
     // console.log('cookies:',req.cookies);
-    return res.render('home-portfolio')
+    return res.render('home-portfolio.ejs')
 }
 
 module.exports.chat = function(req,res){
