@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 
+const google = require('./config/googleData');
 // 6 install cookie parser for reading and writing cookie value 
 const cookieParser = require('cookie-parser');
 
@@ -51,7 +52,7 @@ chatServer.listen(process.env.PORT || 5000,function(err){
 
 
 // 14
-app.use(express.static('./assets/'));
+app.use(express.static(path.join(__dirname,'./assets/')));
 
 
 //8 define session 
@@ -66,7 +67,8 @@ app.use(session(
      },
      store:MongoStore.create({
         // mongoUrl:process.env.uri,
-        mongoUrl:'mongodb://127.0.0.1:27017/project_users_db',
+        mongoUrl:'mongodb+srv://megacloud:megacloud@cluster0.gijawgh.mongodb.net/?retryWrites=true&w=majority',
+        // mongoUrl:'mongodb://127.0.0.1:27017/project_users_db',
         autoRemove: "disabled"
      },
     function(err){ 
@@ -94,9 +96,9 @@ app.use('/',require('./routes'));
 
 
 // 1 listening port
-app.listen(process.env.PORT ||8000, function(err){
+app.listen(process.env.PORT || 8000, function(err){
     if(err){
         console.log('error:',err);
     }
-   console.log('server is running on :',8000);
+   console.log('server is running on :',process.env.PORT);
 });
