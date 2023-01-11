@@ -51,7 +51,7 @@ chatServer.listen(process.env.PORT || 5000,function(err){
 });
 
 app.use(express.static(path.join(__dirname,'./assets/')));
-app.use("/sounds/song/",express.static(path.join(__dirname,'./assets/sounds/song')));
+app.use("/sounds/song/",express.static(path.join(__dirname,'./assets/sounds/song/')));
 
 // 14
 
