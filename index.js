@@ -43,7 +43,7 @@ const flashMware = require('./config/middleware');
 // 13
 const chatServer = require('http').Server(app);
 const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
-chatServer.listen(5000,function(err){
+chatServer.listen(process.env.PORT,function(err){
     if(err){
         console.log('error:',err);
     }
