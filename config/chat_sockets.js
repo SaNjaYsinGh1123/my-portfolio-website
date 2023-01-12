@@ -2,10 +2,10 @@ module.exports.chatSockets = function(chatServer){
    // console.log('hi');
     let port = process.env.PORT || 8000;
     let io = require('socket.io')(chatServer,{
-        cors:{
-            origin:"https://my-portfolio-website-m5jvj3sdx-sanjaysingh1123.vercel.app:5000",
-            methods:["GET","POST"]
-        }
+        //  cors:{
+        //     origin:"https://my-portfolio-website-m5jvj3sdx-sanjaysingh1123.vercel.app:5000",
+        //     methods:["GET","POST"]
+        // }
 
     });
 
