@@ -43,11 +43,11 @@ const flashMware = require('./config/middleware');
 // 13
 const chatServer = require('http').Server(app);
 const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
-chatServer.listen(process.env.PORT || 5000,function(err){
+chatServer.listen(5000,function(err){
     if(err){
         console.log('error:',err);
     }
-    console.log('chat server is running on :',process.env.PORT);
+    console.log('chat server is running on :5000',);
 });
 
 app.use(express.static(path.join(__dirname,'./assets/')));
