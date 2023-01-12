@@ -3,7 +3,7 @@ module.exports.chatSockets = function(chatServer){
     let port = process.env.PORT || 8000;
     let io = require('socket.io')(chatServer,{
          cors:{
-            origin:"https://my-portfolio-website-m5jvj3sdx-sanjaysingh1123.vercel.app",
+            origin:"https://my-portfolio-website-sanjay.vercel.app",
             methods:["GET","POST"]
         }
 
