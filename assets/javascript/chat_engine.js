@@ -21,7 +21,7 @@ class ChatEngine{
         this.chatBoxId = chatBoxId;
         this.userName = userName;
 
-        this.socket = io.connect('https://my-portfolio-website-Sanjay.vercel.app');
+        this.socket = io.connect('https://my-portfolio-website-BEASTMODEON.vercel.app');
         if(this.userName){
         this.connectionHandler();
         }
