@@ -97,9 +97,9 @@ app.use('/',require('./routes'));
 
 
 // 1 listening port
-app.listen(process.env.PORT || 8000, function(err){
-    if(err){
-        console.log('error:',err);
-    }
-   console.log('server is running on :',process.env.PORT);
-});
+// app.listen(process.env.PORT || 8000, function(err){
+//     if(err){
+//         console.log('error:',err);
+//     }
+//    console.log('server is running on :',process.env.PORT);
+// });
