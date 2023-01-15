@@ -67,8 +67,8 @@ app.use(session(
       maxAge: (1000 * 60 * 100)
      },
      store:MongoStore.create({
-        // mongoUrl:process.env.uri,
-        mongoUrl:'mongodb+srv://megacloud:megacloud@cluster0.gijawgh.mongodb.net/?retryWrites=true&w=majority',
+        mongoUrl:process.env.uri,
+        // mongoUrl:'mongodb+srv://megacloud:megacloud@cluster0.gijawgh.mongodb.net/?retryWrites=true&w=majority',
         // mongoUrl:'mongodb://127.0.0.1:27017/project_users_db',
         autoRemove: "disabled"
      },

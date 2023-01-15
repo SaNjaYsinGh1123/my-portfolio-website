@@ -5,9 +5,9 @@ const User = require('../models/user_schema');
 const google = require('../config/googleData');
 
 passport.use(new GoogleStrategy({
-    clientID:google.clientId,
-    clientSecret: google.clientSecret,
-    callbackURL:"https://my-portfolio-website-sanjay.vercel.app/google/callback"
+    clientID:process.env.clientId,
+    clientSecret: process.env.clientSecret,
+    callbackURL:"https://sanjay-singh.vercel.app/google/callback"
 
 },function(accessToken,refreshToken,profile,done){
     User.findOne({email:profile.emails[0].value}).exec(function(err, user){
