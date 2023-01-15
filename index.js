@@ -1,7 +1,7 @@
 // 1 install express and set server
 const express = require('express');
 const path = require('path');
-
+require('dotenv').config();
 const google = require('./config/googleData');
 // 6 install cookie parser for reading and writing cookie value 
 const cookieParser = require('cookie-parser');
