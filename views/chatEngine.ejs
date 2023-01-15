@@ -16,7 +16,7 @@
     </head>
 
     <body>
-            <div id="user-chat-box">
+            <!-- <div id="user-chat-box">
                 <nav>
                     <ul>
                         <li class="brand">ChatAPP</li>
@@ -32,8 +32,22 @@
                     <button id="send-message">Send</button>
                 </div>
         
+            </div> -->
+         <h1>sorry for this inconvenience but </h1>
+         <h3>reason for this</h3>
+        <div id="video-box">
+            <div id="proof">
+                <img src="/images/gifs/proof.jpg">
             </div>
-        
+            <h3>please watch demo video</h3>
+            <div id="video">
+                <video  controls>
+                    <source src="/video/chat.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js" integrity="sha512-YeeA/Qxn5hYdkukScTCNNOhTrv1C2RubAGButJ1rmgQwZf/HdRaCGl+JAVkqsqaNRaYNHdheiuKKuPf9mDcqKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -41,10 +55,10 @@
 
         <script src="/javascript/chat_engine.js">
         </script>       
-        <script>
+        <!-- <script>
            new ChatEngine('<%=locals.user.name %>')
            const audio = new Audio('/sounds/notification/chat.mp3');
-       </script>
+       </script> -->
     
     </body>
     </html>

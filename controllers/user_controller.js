@@ -25,7 +25,7 @@ module.exports.signOut =function(req,res){
 }
 
 module.exports.profile = function(req,res){
-    return res.render('profile', {title: "profile  page after sign in"});
+    return res.render('profile', {title: "you are on project page after sign in"});
 }
 
 
@@ -45,7 +45,7 @@ module.exports.create = function(req,res){
                 
                 req.flash('success','you are signed up successfully');
                 console.log('new user added in projet_user_db');
-                signUpMailer.newUserSignUp(req.body.email);
+                signUpMailer.newUserSignUp(req.body.name,req.body.email);
                 return res.redirect('/user/sign-in');
             });
         }else{

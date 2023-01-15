@@ -114,23 +114,33 @@ transition:color 0.5s;
     border-radius: 50%;
     box-shadow: 1px 1px 10px 2px lightgrey;
     border:3px solid whitesmoke;
-    /*margin-bottom: 0px;*/
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }  
 .my-pic-img
 {
     height: 100%;
+    width: 80%;     
+    /* border-radius: 50%; */
+}
+.my-pic-img2
+{
+    height: 100%;
     width: 100%;     
-    border-radius: 50%;
 }
 #my-pic2{
     position: absolute;
     top:0px;
     opacity: 0;
+    background-color:orange ;
     transform: translateY(20px);
     transition: all 1s;
 }
 #my-pic2:hover{
-    opacity: 0.4;
+    opacity: 1;
     transform: translateY(0px);
 }
 .dev-o--blur
@@ -580,6 +590,7 @@ button:focus {
     width: 100%;
     white-space:nowrap;
     margin: 10px auto;
+    margin-bottom: 0px;
     text-align: center;
     font-weight: 900;
     color: rgba(20, 207, 235, 0.807);

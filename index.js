@@ -41,17 +41,17 @@ const flashMware = require('./config/middleware');
 
 
 // 13
-const chatServer = require('http').Server(app);
-const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
-chatServer.listen(5000,function(err){
-    if(err){
-        console.log('error:',err);
-    }
-    console.log('chat server is running on :5000',);
-});
+// const chatServer = require('http').Server(app);
+// const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
+// chatServer.listen(5000,function(err){
+//     if(err){
+//         console.log('error:',err);
+//     }
+//     console.log('chat server is running on :5000',);
+// });
 
 app.use(express.static(path.join(__dirname,'./assets/')));
-// app.use("/sounds/song/",express.static(path.join(__dirname,'./assets/sounds/song/')));
+app.use("/images",express.static(path.join(__dirname,'./assets/images/gifs/')));
 
 // 14
 
